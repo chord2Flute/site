@@ -72,6 +72,10 @@ section h2 {
     margin-bottom: 20px;
 }
 
+#marge {
+    padding-left: 20px; /* Ajoute une tabulation de 20px à gauche des éléments avec la classe .tabulation */
+}
+
 section p {
     font-size: 16px;
     line-height: 1.6;
