@@ -1,0 +1,91 @@
+/* Styles pour le corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Bleu */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #343840;
+    color: #9bf2ff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(62, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Styles pour la barre de navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #d1f9ff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Couleur de survol jaune */
+}
+
+/* Styles pour les sections */
+section {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(62, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #610a0a;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #343840;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
