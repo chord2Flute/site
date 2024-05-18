@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Sauvegarder la liste dans le stockage local
+    // Sauvegarder la liste dans le stockage local et dans la base de données
     function sauvegarderListe() {
         var joueurs = [];
         var joueursItems = listeJoueurs.getElementsByTagName("li");
@@ -32,6 +32,19 @@ document.addEventListener("DOMContentLoaded", function() {
             joueurs.push(joueursItems[i].textContent);
         }
         localStorage.setItem("joueurs", JSON.stringify(joueurs));
+        
+        // Envoi des données au serveur via une requête AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'sauvegarder_liste.php');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log('Liste sauvegardée avec succès dans la base de données !');
+            } else {
+                console.error('Erreur lors de la sauvegarde de la liste dans la base de données');
+            }
+        };
+        xhr.send(JSON.stringify({ joueurs: joueurs }));
     }
 
     // Charger la liste au chargement de la page
